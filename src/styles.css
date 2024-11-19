@@ -53,6 +53,7 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 1.5rem;
 }
 
 .card {
@@ -81,6 +82,11 @@ button {
 
 .card img {
   width: 100%;
+}
+
+.loading {
+  font-size: 2rem;
+  padding-top: 1.5rem;
 }
 
 @media only screen and (max-width: 600px) {

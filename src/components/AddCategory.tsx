@@ -2,7 +2,6 @@ import { ChangeEvent, FormEvent, useState } from 'react';
 
 interface Props {
   onAddCategory(category: string): void 
-  // setCategories(cat: React.SetStateAction<string[]>): void
 }
 
 export const AddCategory = ({ onAddCategory }: Props ) => {
@@ -14,10 +13,9 @@ export const AddCategory = ({ onAddCategory }: Props ) => {
 
   const onSubmit = (event: FormEvent) => {
     event.preventDefault()
-
     const newInputValue = inputValue.trim();
     if(newInputValue.length <= 2) return
-    // setCategories( (cat) => [inputValue,...cat])
+    
     onAddCategory(newInputValue)
     setInputValue("") 
   }
