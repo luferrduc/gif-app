@@ -6,9 +6,13 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+      '@': '/src',
       '@components': '/src/components',
       '@utils': '/src/utils',
       '@styles': '/src/styles',
-    }
+      '@helpers':'/src/helpers',
+      '@hooks': '/src/hooks'
+    },
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   }
 })

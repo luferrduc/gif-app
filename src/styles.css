@@ -41,6 +41,11 @@ button {
 .form {
   display: flex;
   gap: 20px;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
 }
 
 .card-grid {
@@ -76,4 +81,14 @@ button {
 
 .card img {
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  input {
+    width: 100%;
+  }
+
+  body {
+    padding-inline: 10px;
+  }
 }

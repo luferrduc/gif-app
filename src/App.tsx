@@ -1,41 +1,34 @@
-import { AddCategory } from "@components/AddCategory";
+import { AddCategory, GifGrid } from "@components/index";
 import { useState } from "react"
 
 
 
 export const App = () => {
-  const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
+  const [categories, setCategories] = useState<string[]>([]);
 
-  const onAddCategory = () => {
-    // e.preventDefault()
-    const $categoryInput = document.querySelector<HTMLInputElement>('#input-category')!;
+  const onAddCategory = (category: string) => {
 
-    const newCategory = $categoryInput?.value;
-    if(!newCategory){
-      return
-    }
-
-    setCategories([newCategory,...categories]);
-    $categoryInput.value = "";  
+    const isNewCategoryExists = categories?.find( cat => cat?.toLowerCase() === category.toLowerCase() )
+    if(isNewCategoryExists) return
+    
+    setCategories([category,...categories]);
   }
   
   return (
     <>
-      <h1>Gif Expert App</h1>
+      <h1 className="title">Gif Expert App</h1>
       {/* Form con el input para buscar */}
       
-      <AddCategory />
-      {/* <div className="form">
-        <input type="text" id="input-category"/>
-        <button onClick={onAddCategory}>Agregar</button>
-      </div> */}
+      <AddCategory onAddCategory={onAddCategory} />
+      {/* Otra forma de hacerlo mandando el setState de una, no tan recomendado */}
+      {/* <AddCategory setCategories={setCategories} /> */} 
       {/* Grid o listdo de gifs según el input */}
 
-      <ol>
-        {
-          categories.map(category => <li key={category}>{category}</li>)
-        }
-      </ol>
+      
+      {
+        categories.map(category => (<GifGrid key={category} category={category}/>))
+      }
+ 
     </>
   )
 }
