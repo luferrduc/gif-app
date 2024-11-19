@@ -89,6 +89,10 @@ button {
   padding-top: 1.5rem;
 }
 
+.gif-section {
+  padding-top: 1.5rem;
+}
+
 @media only screen and (max-width: 600px) {
   input {
     width: 100%;

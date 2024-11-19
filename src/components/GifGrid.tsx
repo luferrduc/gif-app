@@ -11,7 +11,7 @@ export const GifGrid = ({ category }: Props) => {
 
 	
 	return (
-		<section>
+		<section className="gif-section">
 			<h3 className="title">{category}</h3>
 			<article className="card-grid">
 				
