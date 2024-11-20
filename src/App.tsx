@@ -1,4 +1,4 @@
-import { AddCategory, GifGrid } from "@components/index";
+import { AddCategory, GifGrid } from "@components";
 import { useState } from "react"
 
 

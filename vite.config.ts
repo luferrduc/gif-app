@@ -13,6 +13,7 @@ export default defineConfig({
       '@helpers':'/src/helpers',
       '@hooks': '/src/hooks'
     },
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
+    extensions: [".tsx", ".ts", ".jsx", ".js"]
+
   }
 })

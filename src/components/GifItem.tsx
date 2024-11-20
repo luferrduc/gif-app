@@ -1,11 +1,10 @@
-
 interface Props {
-  id: string;
+  id?: string;
   title: string;
   url: string;
 }
 
-export const GifItem = ({ title, url }: Props) => {
+export const GifItem = ({ title, url }: Props): JSX.Element => {
   return (
     <div className="card">
       <p>{title}</p>
