@@ -11,5 +11,6 @@ module.exports = {
     "^@helpers/(.*)$": "<rootDir>/src/helpers/$1",
     "^@hooks/(.*)$": "<rootDir>/src/hooks/$1",
     "\\.(css|less|scss|sass)$": "identity-obj-proxy"
-  }
+  },
+  setupFiles: ['./jest.setup.js']
 }

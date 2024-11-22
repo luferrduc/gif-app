@@ -21,7 +21,7 @@ export const AddCategory = ({ onAddCategory }: Props ) => {
   }
 
   return (
-    <form className="form" onSubmit={ onSubmit }>
+    <form className="form" onSubmit={ onSubmit } aria-label="form">
       <input 
         type="text" 
         id="input-category"
